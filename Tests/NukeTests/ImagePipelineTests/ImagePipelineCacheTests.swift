@@ -424,13 +424,13 @@ class ImagePipelineCacheTests: XCTestCase {
 
     // MARK: Remove All
 
-    func testRemoveAll() {
+    func testRemoveAll1() {
         // GIVEN
         let request = Test.request
         cache.storeCachedImage(Test.container, for: request, caches: [.memory, .disk])
 
         // WHEN
-        cache.removeAll()
+        cache.removeAll1()
 
         // THEN
         XCTAssertNil(cache.cachedImage(for: request))
@@ -446,7 +446,7 @@ class ImagePipelineCacheTests: XCTestCase {
         cache.storeCachedImage(Test.container, for: request, caches: [.all])
 
         // WHEN
-        cache.removeAll()
+        cache.removeAll1()
 
         // THEN
         XCTAssertNil(cache.cachedImage(for: request))

@@ -23,5 +23,5 @@ public protocol DataCaching: Sendable {
     func removeData(for key: String)
 
     /// Removes all items.
-    func removeAll()
+    func removeAll1()
 }

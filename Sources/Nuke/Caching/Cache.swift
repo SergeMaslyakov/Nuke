@@ -48,7 +48,7 @@ final class Cache<Key: Hashable, Value>: @unchecked Sendable {
 
         self.memoryPressure = DispatchSource.makeMemoryPressureSource(eventMask: [.warning, .critical], queue: .main)
         self.memoryPressure.setEventHandler { [weak self] in
-            self?.removeAll()
+            self?.removeAll1()
         }
         self.memoryPressure.resume()
 
@@ -141,7 +141,7 @@ final class Cache<Key: Hashable, Value>: @unchecked Sendable {
         _totalCost -= node.value.cost
     }
 
-    func removeAll() {
+    func removeAll1() {
         lock.lock()
         defer { lock.unlock() }
 

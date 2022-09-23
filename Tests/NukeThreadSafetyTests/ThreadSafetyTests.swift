@@ -110,7 +110,7 @@ class ThreadSafetyTests: XCTestCase {
 
         ops += [
             { cache.trim(toCost: rnd_cost()) },
-            { cache.removeAll() }
+            { cache.removeAll1() }
         ]
 
         #if os(iOS) || os(tvOS)

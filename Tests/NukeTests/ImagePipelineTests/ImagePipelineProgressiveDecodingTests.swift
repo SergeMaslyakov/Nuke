@@ -15,7 +15,7 @@ class ImagePipelineProgressiveDecodingTests: XCTestCase {
         super.setUp()
 
         dataLoader = MockProgressiveDataLoader()
-        ResumableDataStorage.shared.removeAll()
+        ResumableDataStorage.shared.removeAll1()
 
         cache = MockImageCache()
         processorsFactory = MockProcessorFactory()

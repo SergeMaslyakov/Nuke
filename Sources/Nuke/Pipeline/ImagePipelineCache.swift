@@ -212,10 +212,10 @@ extension ImagePipeline.Cache {
     /// different requests, this won't remove images from them.
     public func removeAll(caches: Caches = [.all]) {
         if caches.contains(.memory) {
-            configuration.imageCache?.removeAll()
+            configuration.imageCache?.removeAll1()
         }
         if caches.contains(.disk) {
-            configuration.dataCache?.removeAll()
+            configuration.dataCache?.removeAll1()
         }
     }
 

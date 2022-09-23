@@ -33,7 +33,7 @@ final class MockDataCache: DataCaching, @unchecked Sendable {
         store[key] = nil
     }
 
-    func removeAll() {
-        store.removeAll()
+    func removeAll1() {
+        store.removeAll1()
     }
 }

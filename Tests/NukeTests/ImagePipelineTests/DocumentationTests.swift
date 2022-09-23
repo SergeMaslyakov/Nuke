@@ -113,7 +113,7 @@ private func checkAccessCachedImages06() {
     cache.storeCachedImage(ImageContainer(image: image), for: request)
 
     cache.removeCachedImage(for: request)
-    cache.removeAll()
+    cache.removeAll1()
 
     _ = data
 }
@@ -150,7 +150,7 @@ private func checkCacheLayers01() {
     let image = ImageCache.shared[request]
 
     // Clear cache
-    ImageCache.shared.removeAll()
+    ImageCache.shared.removeAll1()
 
     _ = image
 }
@@ -187,7 +187,7 @@ private func checkCacheLayers04() throws {
     let data = dataCache.cachedData(for: "key")
     // or let data = dataCache["key"]
     dataCache.removeData(for: "key")
-    dataCache.removeAll()
+    dataCache.removeAll1()
 
     _ = data
 }

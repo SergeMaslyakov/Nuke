@@ -38,7 +38,7 @@ class MockImageCache: ImageCaching, @unchecked Sendable {
         }
     }
 
-    func removeAll() {
+    func removeAll1() {
         images.removeAll()
     }
 }
